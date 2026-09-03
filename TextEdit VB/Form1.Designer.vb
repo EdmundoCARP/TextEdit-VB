@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         MenuStrip1 = New MenuStrip()
         ArchivoToolStripMenuItem = New ToolStripMenuItem()
         NuevoToolStripMenuItem = New ToolStripMenuItem()
@@ -52,6 +53,7 @@ Partial Class Form1
         FontDialog2 = New FontDialog()
         ColorDialog1 = New ColorDialog()
         SaveFileDialog1 = New SaveFileDialog()
+        HoraYFechaToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -73,32 +75,38 @@ Partial Class Form1
         ' 
         ' NuevoToolStripMenuItem
         ' 
+        NuevoToolStripMenuItem.Image = CType(resources.GetObject("NuevoToolStripMenuItem.Image"), Image)
         NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        NuevoToolStripMenuItem.Size = New Size(150, 22)
+        NuevoToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.N
+        NuevoToolStripMenuItem.Size = New Size(190, 22)
         NuevoToolStripMenuItem.Text = "Nuevo"
         ' 
         ' AbrirToolStripMenuItem
         ' 
         AbrirToolStripMenuItem.Name = "AbrirToolStripMenuItem"
-        AbrirToolStripMenuItem.Size = New Size(150, 22)
+        AbrirToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
+        AbrirToolStripMenuItem.Size = New Size(180, 22)
         AbrirToolStripMenuItem.Text = "Abrir"
         ' 
         ' GuardarToolStripMenuItem
         ' 
         GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
-        GuardarToolStripMenuItem.Size = New Size(150, 22)
+        GuardarToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.G
+        GuardarToolStripMenuItem.Size = New Size(190, 22)
         GuardarToolStripMenuItem.Text = "Guardar"
         ' 
         ' GuardarComoToolStripMenuItem
         ' 
         GuardarComoToolStripMenuItem.Name = "GuardarComoToolStripMenuItem"
-        GuardarComoToolStripMenuItem.Size = New Size(150, 22)
+        GuardarComoToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.S
+        GuardarComoToolStripMenuItem.Size = New Size(190, 22)
         GuardarComoToolStripMenuItem.Text = "Guardar como"
         ' 
         ' SalirToolStripMenuItem
         ' 
         SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        SalirToolStripMenuItem.Size = New Size(150, 22)
+        SalirToolStripMenuItem.ShortcutKeys = Keys.Alt Or Keys.F4
+        SalirToolStripMenuItem.Size = New Size(190, 22)
         SalirToolStripMenuItem.Text = "Salir"
         ' 
         ' EdicionToolStripMenuItem
@@ -111,37 +119,43 @@ Partial Class Form1
         ' DeshacerToolStripMenuItem
         ' 
         DeshacerToolStripMenuItem.Name = "DeshacerToolStripMenuItem"
-        DeshacerToolStripMenuItem.Size = New Size(162, 22)
+        DeshacerToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.Z
+        DeshacerToolStripMenuItem.Size = New Size(204, 22)
         DeshacerToolStripMenuItem.Text = "Deshacer"
         ' 
         ' RehacerToolStripMenuItem
         ' 
         RehacerToolStripMenuItem.Name = "RehacerToolStripMenuItem"
-        RehacerToolStripMenuItem.Size = New Size(162, 22)
+        RehacerToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.Y
+        RehacerToolStripMenuItem.Size = New Size(204, 22)
         RehacerToolStripMenuItem.Text = "Rehacer"
         ' 
         ' CortarToolStripMenuItem
         ' 
         CortarToolStripMenuItem.Name = "CortarToolStripMenuItem"
-        CortarToolStripMenuItem.Size = New Size(162, 22)
+        CortarToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.X
+        CortarToolStripMenuItem.Size = New Size(204, 22)
         CortarToolStripMenuItem.Text = "Cortar"
         ' 
         ' CopiarToolStripMenuItem
         ' 
         CopiarToolStripMenuItem.Name = "CopiarToolStripMenuItem"
-        CopiarToolStripMenuItem.Size = New Size(162, 22)
+        CopiarToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.C
+        CopiarToolStripMenuItem.Size = New Size(204, 22)
         CopiarToolStripMenuItem.Text = "Copiar"
         ' 
         ' PegarToolStripMenuItem
         ' 
         PegarToolStripMenuItem.Name = "PegarToolStripMenuItem"
-        PegarToolStripMenuItem.Size = New Size(162, 22)
+        PegarToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.V
+        PegarToolStripMenuItem.Size = New Size(204, 22)
         PegarToolStripMenuItem.Text = "Pegar"
         ' 
         ' SeleccionarTodoToolStripMenuItem
         ' 
         SeleccionarTodoToolStripMenuItem.Name = "SeleccionarTodoToolStripMenuItem"
-        SeleccionarTodoToolStripMenuItem.Size = New Size(162, 22)
+        SeleccionarTodoToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.A
+        SeleccionarTodoToolStripMenuItem.Size = New Size(204, 22)
         SeleccionarTodoToolStripMenuItem.Text = "Seleccionar todo"
         ' 
         ' FormatoToolStripMenuItem
@@ -154,18 +168,20 @@ Partial Class Form1
         ' FuenteToolStripMenuItem
         ' 
         FuenteToolStripMenuItem.Name = "FuenteToolStripMenuItem"
+        FuenteToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F
         FuenteToolStripMenuItem.Size = New Size(180, 22)
         FuenteToolStripMenuItem.Text = "Fuente"
         ' 
         ' TextoToolStripMenuItem
         ' 
         TextoToolStripMenuItem.Name = "TextoToolStripMenuItem"
+        TextoToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.E
         TextoToolStripMenuItem.Size = New Size(180, 22)
         TextoToolStripMenuItem.Text = "Texto"
         ' 
         ' HerramientasToolStripMenuItem
         ' 
-        HerramientasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ContarPalabrasToolStripMenuItem, ContarCaracteresToolStripMenuItem, BuscarToolStripMenuItem})
+        HerramientasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ContarPalabrasToolStripMenuItem, ContarCaracteresToolStripMenuItem, BuscarToolStripMenuItem, HoraYFechaToolStripMenuItem})
         HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
         HerramientasToolStripMenuItem.Size = New Size(90, 20)
         HerramientasToolStripMenuItem.Text = "Herramientas"
@@ -173,19 +189,22 @@ Partial Class Form1
         ' ContarPalabrasToolStripMenuItem
         ' 
         ContarPalabrasToolStripMenuItem.Name = "ContarPalabrasToolStripMenuItem"
-        ContarPalabrasToolStripMenuItem.Size = New Size(166, 22)
+        ContarPalabrasToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.W
+        ContarPalabrasToolStripMenuItem.Size = New Size(208, 22)
         ContarPalabrasToolStripMenuItem.Text = "Contar palabras"
         ' 
         ' ContarCaracteresToolStripMenuItem
         ' 
         ContarCaracteresToolStripMenuItem.Name = "ContarCaracteresToolStripMenuItem"
-        ContarCaracteresToolStripMenuItem.Size = New Size(166, 22)
+        ContarCaracteresToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.U
+        ContarCaracteresToolStripMenuItem.Size = New Size(208, 22)
         ContarCaracteresToolStripMenuItem.Text = "Contar caracteres"
         ' 
         ' BuscarToolStripMenuItem
         ' 
         BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        BuscarToolStripMenuItem.Size = New Size(166, 22)
+        BuscarToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.B
+        BuscarToolStripMenuItem.Size = New Size(180, 22)
         BuscarToolStripMenuItem.Text = "Buscar"
         ' 
         ' AyudaToolStripMenuItem
@@ -198,7 +217,8 @@ Partial Class Form1
         ' AcercaDeToolStripMenuItem
         ' 
         AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        AcercaDeToolStripMenuItem.Size = New Size(126, 22)
+        AcercaDeToolStripMenuItem.ShortcutKeys = Keys.Shift Or Keys.F1
+        AcercaDeToolStripMenuItem.Size = New Size(215, 22)
         AcercaDeToolStripMenuItem.Text = "Acerca de"
         ' 
         ' StatusStrip1
@@ -221,6 +241,12 @@ Partial Class Form1
         ' OpenFileDialog1
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
+        ' HoraYFechaToolStripMenuItem
+        ' 
+        HoraYFechaToolStripMenuItem.Name = "HoraYFechaToolStripMenuItem"
+        HoraYFechaToolStripMenuItem.Size = New Size(208, 22)
+        HoraYFechaToolStripMenuItem.Text = "Hora y fecha"
         ' 
         ' Form1
         ' 
@@ -258,7 +284,6 @@ Partial Class Form1
     Friend WithEvents HerramientasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContarPalabrasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ContarCaracteresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuscarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
@@ -270,5 +295,6 @@ Partial Class Form1
     Friend WithEvents SeleccionarTodoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FuenteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TextoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HoraYFechaToolStripMenuItem As ToolStripMenuItem
 
 End Class

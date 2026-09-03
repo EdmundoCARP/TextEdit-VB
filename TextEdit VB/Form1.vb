@@ -130,7 +130,10 @@
 
     ' Ayuda -> Acerca de
     Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
-        MessageBox.Show("TextEdit VB v1.0" & vbCrLf & "Desarrollado para la asignatura Programación de Aplicaciones de Escritorio.", "Acerca de", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("TextEdit VB v1.0" & vbCrLf &
+                "Desarrollado para la asignatura Programación de Aplicaciones de Escritorio." & vbCrLf & vbCrLf &
+                "Elaborado por Edmundo Enrique Diaz Alburquerque y Lenner Elias Zeledon Lazo",
+                "Acerca de", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub DeshacerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeshacerToolStripMenuItem.Click
@@ -167,5 +170,13 @@
         If ColorDialog1.ShowDialog() = DialogResult.OK Then
             RichTextBox1.SelectionColor = ColorDialog1.Color
         End If
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
+        RichTextBox1.Clear()
+    End Sub
+
+    Private Sub HoraYFechaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HoraYFechaToolStripMenuItem.Click
+        RichTextBox1.SelectedText = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")
     End Sub
 End Class
